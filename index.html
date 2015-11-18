@@ -49,26 +49,28 @@
 				.small { font-size: 16px; line-height: 150%;}
 				a:link { background: rgba(0, 231, 255, 0.37);  }
 				a:hover { background: yellow; }
-				.time { padding-left: 20%; margin-bottom: 6px; }
+				.time { padding-left: 14%; margin-bottom: 6px; }
 				.title  { mix-blend-mode: multiply; font-size: 10vh; margin: 20% 40%; position: absolute; z-index: -1; color: lime;  }
 				table  { table-layout: fixed;
 				  width: 100%; /* must have this set */
 				}
+				.time span {display: none;}
 
 				/* Screen small ----------- */
-				@media only screen and (max-width : 758px) {
-					.child.double {
-					-webkit-flex: 2 0 220px; flex: 2 0 220px;
-					}
+				@media only screen and (max-width : 757px) {
 				.child.triple  {
 					-webkit-flex: 3 0 220px; flex: 3 0 220px;
 					}
+					td:first-child { position: relative; z-index: -11; font-size: 260%; color: rgb(255,242,0); border-left: 0; -webkit-transform: rotate(0); transform: rotate(0);  }
+					td { width: 100%; display:block;}
+					.time { padding-left: 14%; margin-bottom: 30px; }
+					.time span {display: none;}
 				}
 				@media  print {
-					.title { font-size: 800%;  }
+					.title { font-size: 1200%; line-height: 120%;  }
 					td { font-size: 34pt; }
-					.time { margin-bottom: 3.8pt; }
-					.small { font-size: 14pt; line-height: 140%;}
+					.time { padding-left: 20%; margin-bottom: 28pt; }
+					.small { font-size: 13pt; line-height: 130%;}
 					}
 				}
     </style>
@@ -92,7 +94,7 @@
 												<td >{{day}}</td>
 								        <td >{{name}}</td>
 								        <td >{{faculty}}</td>
-								        <td class="doublewide small "><p class="time">{{time}}</p>{{description}}  <a href="{{link}}">{{more}}</a></td>
+								        <td class="doublewide small "><p class="time">{{time}} <span>( {{day}} )</span></p>{{description}}  <a href="{{link}}">{{more}}</a></td>
 											</tr>
 											</table>
 												</div>
