@@ -42,7 +42,30 @@
 				-webkit-flex: 3 0 660px; flex: 3 0 660px;
 				}
 
-				td:first-child { min-width: 50%; }
+				td:first-child { min-width: 200px; }
+				td { mix-blend-mode: multiply; color: rgb(255,0,0);  }
+
+				/* breakpoints */
+				/* typography */
+				@font-face {
+				  font-family: "Circular-Book";
+				  src: url("http://notices-app.risd.gd/fonts/lineto-circular-book.eot");
+				  src: url("http://notices-app.risd.gd/fonts/lineto-circular-book.eot?#iefix") format("embedded-opentype"), url("fonts/lineto-circular-book.woff") format("woff"), url("fonts/lineto-circular-book.ttf") format("truetype"), url("fonts/lineto-circular-book.svg#lineto-circular-book") format("svg");
+				  font-weight: normal;
+				  font-style: normal; }
+				html,
+				textarea,
+				select,
+				input {
+				  font-size: 30px;
+				  line-height: 1.25;
+				  font-family: "Circular-Book", Helvetica, Arial, sans-serif;
+				  letter-spacing: 0.5px;
+				  word-spacing: -1px;
+				  -webkit-font-smoothing: antialiased;
+				  text-rendering: optimizeLegibility;
+				  -webkit-text-size-adjust: 100%; }
+
 
 				/* Screen small ----------- */
 				@media only screen and (max-width : 758px) {
@@ -52,10 +75,12 @@
 				.child.triple  {
 					-webkit-flex: 3 0 220px; flex: 3 0 220px;
 					}
-
+				@media  print {
+					.parent { width: 204pc; }
+					html { font-size: 60px; }
+				}
 				}
     </style>
-		<link rel="stylesheet" href="http://notices-app.risd.gd/common/css/main.css">
 
     </head>
     <body>
@@ -63,12 +88,13 @@
 								<script type="x-gridspree-template">
 								<div class="parent">
 								    {{#rows}}
-										<div class="child triple">
+										<div class="child ">
 										<table>
 											<tr>
+												<td>{{day}}</td>
 								        <td>{{name}}</td>
 								        <td>{{faculty}}</td>
-												<td>{{day}} / {{time}}</td>
+												<td>{{time}}</td>
 											</tr>
 											<tr>
 								        <td>{{description}}  {{more}}</td>
