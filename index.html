@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-	  <title>The Design Office: Flex Framework</title>
+	  <title>RISD Graphic Design: Spring 2016 Electives</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="title" content="The Design Office">
 	  <meta name="description" content="Flex framework that we're using">
@@ -40,13 +40,21 @@
 			.child.triple  {
 				-webkit-flex: 3 0 660px; flex: 3 0 660px;
 				}
-				td { min-width: 60px; max-width: 1200px; }
-				td:first-child { mix-blend-mode: multiply; font-size: 360%; color: rgb(255,255,0); border-left: 3px rgb(255,255,0) solid; -webkit-transform: rotate(90deg); transform: rotate(90deg);  }
-				td:nth-child(n+2) {  padding-right: 20px; color: rgba(0,0,0,.45);  }
+				td { width: 20%;  }
+				td.doublewide { width: 40%; }
+				td:first-child { position: relative; z-index: -11; font-size: 360%; color: rgb(255,242,0); border-left: 3px rgb(255,242,0) solid; -webkit-transform: rotate(90deg); transform: rotate(90deg);  }
+				td:nth-child(n+2) {  padding-right: 20px; color: rgba(0,0,0,.45); mix-blend-mode: multiply; }
 				td:nth-child(2) {  color: black; }
+				td:nth-child(4) { width: 66%;  }
 				.small { font-size: 16px; line-height: 150%;}
 				a:link { background: rgba(0, 231, 255, 0.37);  }
 				a:hover { background: yellow; }
+				.time { padding-left: 20%; margin-bottom: 6px; }
+				.title  { mix-blend-mode: multiply; font-size: 10vh; margin: 20% 40%; position: absolute; z-index: -1; color: lime;  }
+				table  { table-layout: fixed;
+				  width: 100%; /* must have this set */
+				}
+
 				/* Screen small ----------- */
 				@media only screen and (max-width : 758px) {
 					.child.double {
@@ -55,9 +63,13 @@
 				.child.triple  {
 					-webkit-flex: 3 0 220px; flex: 3 0 220px;
 					}
-				@media  print {
-					html { width: 204pc; font-size: 60px; }
 				}
+				@media  print {
+					.title { font-size: 800%;  }
+					td { font-size: 34pt; }
+					.time { margin-bottom: 3.8pt; }
+					.small { font-size: 14pt; line-height: 140%;}
+					}
 				}
     </style>
 		<link rel="stylesheet" href="http://notices-app.risd.gd/common/css/main.css">
@@ -66,22 +78,21 @@
     <body>
 								<script src="https://gridspree.io/ss/vKsKt9wWenSf5wWobfgTW5.js"></script>
 								<script type="x-gridspree-template">
-									<table style="margin: 50%; font-size: 400%; -webkit-transform: rotate(-90deg); transform: rotate(-90deg);position: absolute; z-index: -1;"><tr><td style=" border-left: 0; color: lime; ">
+								<div class="title" style=" ">
 
-									 SPRING 2016 ❀❀ RISD GD
+								Graphic Design ✿❀❁ Spring 2016
 
-									</td></tr></table>
+								</div>
 								</div>
 								<div class="parent">
 										{{#rows}}
 										<div class="child triple">
 										<table>
 											<tr>
-												<td>{{day}}</td>
-								        <td>{{name}}</td>
-								        <td>{{faculty}}</td>
-												<td class="small">{{time}}</td>
-								        <td class="small">{{description}}  <a href="{{link}}">{{more}}</a></td>
+												<td >{{day}}</td>
+								        <td >{{name}}</td>
+								        <td >{{faculty}}</td>
+								        <td class="doublewide small "><p class="time">{{time}}</p>{{description}}  <a href="{{link}}">{{more}}</a></td>
 											</tr>
 											</table>
 												</div>
