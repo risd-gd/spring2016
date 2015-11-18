@@ -19,7 +19,6 @@
 			-webkit-flex-wrap: wrap; flex-wrap: wrap;
 			padding: 0 22px 0 22px;
 			margin-bottom: 66px;
-			border: 1px solid black;
 		}
 
 /*		.parent .child:nth-child(n):before { content: counter(my--counter); } */
@@ -42,11 +41,12 @@
 				-webkit-flex: 3 0 660px; flex: 3 0 660px;
 				}
 				td { min-width: 60px; max-width: 1200px; }
-				td:first-child { mix-blend-mode: multiply; font-size: 360%; color: yellow; text-transform: uppercase; border-left: 3px yellow solid; transform: rotate(90deg);  }
+				td:first-child { mix-blend-mode: multiply; font-size: 360%; color: yellow; border-left: 3px yellow solid; transform: rotate(90deg);  }
 				td:nth-child(n+2) {  padding-right: 20px; color: grey;  }
 				td:nth-child(2) {  color: black; }
-				.small { font-size: 14px; line-height: 150%;}
-
+				.small { font-size: 16px; line-height: 150%;}
+				a:link { background: yellow; }
+				a:hover { background: green; }
 				/* Screen small ----------- */
 				@media only screen and (max-width : 758px) {
 					.child.double {
@@ -66,6 +66,8 @@
     <body>
 								<script src="https://gridspree.io/ss/vKsKt9wWenSf5wWobfgTW5.js"></script>
 								<script type="x-gridspree-template">
+									<table style="margin: 50vw; position: absolute; z-index: -1;"><tr><td>Graphic Design ✵ Spring 2016 ✵ Rhode Island School of Design</td></tr></table>
+								</div>
 								<div class="parent">
 										{{#rows}}
 										<div class="child triple">
@@ -75,7 +77,7 @@
 								        <td>{{name}}</td>
 								        <td>{{faculty}}</td>
 												<td class="small">{{time}}</td>
-								        <td class="small">{{description}}  {{more}}</td>
+								        <td class="small">{{description}}  <a href="{{link}}">{{more}}</a></td>
 											</tr>
 											</table>
 												</div>
