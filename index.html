@@ -20,6 +20,11 @@
 			padding: 0 22px 0 22px;
 			margin-bottom: 66px;
 		}
+		@font-face {
+			font-family: "Ziroli";
+			src: url("ZiroliWes9") format("opentype");
+			font-weight: normal;
+			font-style: normal; }
 
 /*		.parent .child:nth-child(n):before { content: counter(my--counter); } */
 			.child {
@@ -50,7 +55,7 @@
 				a:link { background: rgba(0, 231, 255, 0.37);  }
 				a:hover { background: yellow; }
 				.time { padding-left: 14%; margin-bottom: 6px; }
-				.title  { mix-blend-mode: multiply; font-size: 12vw; margin: 30% 70% 20% 21%; position: absolute; z-index: -1; color: lime; word-spacing: -20pt; -webkit-transform: rotate(90deg); transform: rotate(90deg);  }
+				.title  { font-family: Ziroli; mix-blend-mode: multiply; font-size: 12vw; margin: 30% 70% 20% 21%; position: absolute; z-index: -1; color: lime; word-spacing: -20pt; -webkit-transform: rotate(90deg); transform: rotate(90deg);  }
 				table  { table-layout: fixed;
 				  width: 100%; /* must have this set */
 				}
@@ -75,11 +80,6 @@
 					.small { font-size: 11pt; line-height: 130%;}
 					}
 				}
-				@font-face {
-				  font-family: "Ziroli";
-				  src: url("ziroli.otf");
-				  font-weight: normal;
-				  font-style: normal; }
     </style>
 		<link rel="stylesheet" href="http://notices-app.risd.gd/common/css/main.css">
 
@@ -87,10 +87,8 @@
     <body>
 								<script src="https://gridspree.io/ss/vKsKt9wWenSf5wWobfgTW5.js"></script>
 								<script type="x-gridspree-template">
-								<div class="title" style="font-family: Ziroli">
-
-								  SPRING 2016 -
-
+								<div class="title">
+									SPRING 2016 -
 								</div>
 								</div>
 								<div class="parent">
