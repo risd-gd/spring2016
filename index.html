@@ -43,14 +43,14 @@
 				td { width: 20%;  }
 				td.doublewide { width: 40%; }
 				td:first-child { position: relative; z-index: -11; font-size: 360%; color: rgb(255,242,0); border-left: 3px rgb(255,242,0) solid; -webkit-transform: rotate(90deg); transform: rotate(90deg);  }
-				td:nth-child(n+2) {  padding-right: 20px; color: rgba(0,0,0,.45); mix-blend-mode: multiply; }
+				td:nth-child(n+2) {  padding-right: 20px; color: rgba(0,0,0,.45);  }
 				td:nth-child(2) {  color: black; }
 				td:nth-child(4) { width: 66%;  }
 				.small { font-size: 16px; line-height: 150%;}
 				a:link { background: rgba(0, 231, 255, 0.37);  }
 				a:hover { background: yellow; }
 				.time { padding-left: 14%; margin-bottom: 6px; }
-				.title  { mix-blend-mode: multiply; font-size: 10vh; margin: 20% 40%; position: absolute; z-index: -1; color: lime;  }
+				.title  { mix-blend-mode: multiply; font-size: 12vw; margin: 30% 50% 20% 21%; position: absolute; z-index: -1; color: lime; word-spacing: -20pt; -webkit-transform: rotate(90deg); transform: rotate(90deg);  }
 				table  { table-layout: fixed;
 				  width: 100%; /* must have this set */
 				}
@@ -58,19 +58,21 @@
 
 				/* Screen small ----------- */
 				@media only screen and (max-width : 757px) {
+					.title { display: none; }
 				.child.triple  {
 					-webkit-flex: 3 0 220px; flex: 3 0 220px;
 					}
-					td:first-child { position: relative; z-index: -11; font-size: 260%; color: rgb(255,242,0); border-left: 0; -webkit-transform: rotate(0); transform: rotate(0);  }
-					td { width: 100%; display:block;}
+					td:first-child { position: relative; z-index: -11; font-size: 260%; color: rgb(255,242,0); border-left: 0; -webkit-transform: rotate(0); transform: rotate(0); left: -4px; }
+					td, .doublewide { width: 100%; display:block; }
 					.time { padding-left: 14%; margin-bottom: 30px; }
 					.time span {display: none;}
+					td:nth-child(4) { width: 100%;  }
 				}
 				@media  print {
-					.title { font-size: 1200%; line-height: 120%;  }
+					.title { font-size: 1200%; line-height: 110%;  letter-spacing: -2pt;  }
 					td { font-size: 34pt; }
 					.time { padding-left: 20%; margin-bottom: 28pt; }
-					.small { font-size: 13pt; line-height: 130%;}
+					.small { font-size: 11pt; line-height: 130%;}
 					}
 				}
     </style>
@@ -80,9 +82,9 @@
     <body>
 								<script src="https://gridspree.io/ss/vKsKt9wWenSf5wWobfgTW5.js"></script>
 								<script type="x-gridspree-template">
-								<div class="title" style=" ">
+								<div class="title" style="font-family: ziroli">
 
-								Graphic Design ✿❀❁ Spring 2016
+								  SPRING 2016 -
 
 								</div>
 								</div>
