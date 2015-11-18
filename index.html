@@ -50,14 +50,14 @@
 				a:link { background: rgba(0, 231, 255, 0.37);  }
 				a:hover { background: yellow; }
 				.time { padding-left: 14%; margin-bottom: 6px; }
-				.title  { mix-blend-mode: multiply; font-size: 12vw; margin: 30% 10% 20% 21%; position: absolute; z-index: -1; color: lime; word-spacing: -20pt; -webkit-transform: rotate(90deg); transform: rotate(90deg);  }
+				.title  { mix-blend-mode: multiply; font-size: 12vw; margin: 30% 70% 20% 21%; position: absolute; z-index: -1; color: lime; word-spacing: -20pt; -webkit-transform: rotate(90deg); transform: rotate(90deg);  }
 				table  { table-layout: fixed;
 				  width: 100%; /* must have this set */
 				}
 				.time span {display: none;}
 
 				/* Screen small ----------- */
-				@media only screen and (max-width : 757px) {
+				@media only screen and (max-width : 957px) {
 					.title { display: none; }
 				.child.triple  {
 					-webkit-flex: 3 0 220px; flex: 3 0 220px;
@@ -69,7 +69,7 @@
 					td:nth-child(4) { width: 100%;  }
 				}
 				@media  print {
-					.title { font-size: 1200%; line-height: 110%;  letter-spacing: -2pt;  }
+					.title { mix-blend-mode: multiply; font-size: 1200%; line-height: 110%;  letter-spacing: -2pt; color: #75c044; margin: 65% 00% 70% 14%; }
 					td { font-size: 34pt; }
 					.time { padding-left: 20%; margin-bottom: 28pt; }
 					.small { font-size: 11pt; line-height: 130%;}
