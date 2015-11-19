@@ -31,18 +31,6 @@
 			/*	counter-increment: my--counter; */
 				margin:22px;
 				min-height: 44px;
-				-webkit-flex: 1 0 220px; flex: 1 0 220px;
-			}
-			.child.shrink {
-				-webkit-flex: 0 1 220px; flex: 0 1 220px;
-				}
-				.child.grow {
-					-webkit-flex: 2 0 220px; flex: 2 0 220px;
-					}
-			.child.double {
-				-webkit-flex: 2 0 440px; flex: 2 0 440px;
-				}
-			.child.triple  {
 				-webkit-flex: 3 0 660px; flex: 3 0 660px;
 				}
 				td { width: 20%;  }
@@ -64,7 +52,7 @@
 				/* Screen small ----------- */
 				@media only screen and (max-width : 957px) {
 					.title { display: none; }
-				.child.triple  {
+				.child  {
 					-webkit-flex: 3 0 220px; flex: 3 0 220px;
 					}
 					td:first-child { position: relative; z-index: -11; font-size: 260%; color: rgb(255,242,0); border-left: 0; -webkit-transform: rotate(0); transform: rotate(0); left: -4px; }
@@ -92,7 +80,7 @@
 								</div>
 								<div class="parent">
 										{{#rows}}
-										<div class="child triple">
+										<div class="child ">
 										<table>
 											<tr>
 												<td >{{day}}</td>
